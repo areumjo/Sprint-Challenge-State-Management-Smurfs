@@ -1,6 +1,4 @@
-import {
-    FETCHING_START, FETCHING_SUCCESS
-} from '../actions';
+import { FETCHING_START, FETCHING_SUCCESS } from '../actions';
 
 const initialState = {
     smurfs: []

@@ -24,3 +24,26 @@ export const getData = () => {
             })
     }
 }
+
+// export const ADDING_SUCCESS = "ADDING_SUCCESS";
+// export const ADDING_FAILURE = "ADDING_FAILURE";
+
+// export const addData = (stateArray) => {
+//     return dispatch => {
+//         axios
+//             .post("")
+//             .then(res => {
+//                 console.log('adding Data: ', res)
+//                 dispatch({
+//                     type: ADDING_SUCCESS,
+//                     payload: stateArray
+//                 })
+//             })
+//             .catch(err => {
+//                 console.log('error, can not add: ', err)
+//                 dispatch( {
+//                     type: ADDING_FAILURE,
+//                 })
+//             })
+//     }
+// }
