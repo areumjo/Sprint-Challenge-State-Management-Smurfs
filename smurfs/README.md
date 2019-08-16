@@ -11,7 +11,7 @@
 
 1. create store from Redux (index.js )
 
-2. build a reducer and pass the reduer to createStore ==> initialState and reducerreducer = (state = initialState, action)
+2. build a reducer and pass the reduer to createStore ==> initialState and reducer = (state = initialState, action)
 
     - 2.0 switch (better to set up default first)
     - 2.1 make more reducers
