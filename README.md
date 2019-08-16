@@ -23,10 +23,25 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+  - In React, we can only `send` props one direction. if we want to use some props in deep down component level, we should do `prop drilling` which is hard to debug.
+  - Context API gives a way to stroe data on a context `object` and we can retrieve that data in any components we want to use.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+  - `actions` can determine what 'action' we want to do. And with action, payload, we can grab any data on the application.
+  - `reducers` defines initial state and what to do to the state. Simply speaking, we can add/subtract any value to the state. `reducer` is a pure function so it doesn't disturb initial state and maintains the immutability.
+  - `store` is a container that is used to manage state. The state of the application is stored in this place as a single state object so it is known as a 'single source of truth'.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+  - When the state is used all over the application and every single input or button will change large-spectrum UI, then it is easy to handle the state as Application state.
+  - Otherwise, the state is only affect component-level and does not really pass down to another component, Component state is useful.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+  - Redux rens synchronously by default. So if we tried to make an API call in Redux, we would have to wait until the call came back to do any things.
+  - `redux-thunk` is a middleware package that we can use to give Redux the ability to run asynchronous operations.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+  - Redux!
+  - It gives us so much possibilities to do run the application. And each step makes sense to show what roles they are doing for the application. It is easy to read and easy to write a code in redux in my opinion.
 
 ## Project Set Up
 
