@@ -37,9 +37,7 @@ class App extends Component {
             <button onClick={this.props.getData}>
               Let's get some smurfs!
             </button>
-            <div>
               {this.props.smurfs.map(a=><Smurf name={a.name} key={a.id} height={a.height} age={a.age}/>)}
-          </div>
           </div>
           <div className="right-container">
             <AddForm handleChange={this.handleChange}/>

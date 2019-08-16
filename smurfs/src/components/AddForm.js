@@ -8,14 +8,18 @@ function AddForm({ values, errors, touched, isSubmitting }) {
     <Form>
         <h3>new smurf in the town</h3>
         <div>
+            <label>Smurf name:</label>
             {touched.name && errors.name && <p>{errors.name}</p>}
             <Field type="name" name="name" placeholder="name" />
+            
         </div>
         <div>
+            <label>Smurf age:</label>
             {touched.age && errors.age && <p>{errors.age}</p>}
             <Field type="age" name="age" placeholder="age" />
         </div>
         <div>
+            <label>Smurf height:</label>
             {touched.height && errors.height && <p>{errors.height}</p>}
             <Field type="height" name="height" placeholder="height" />
         </div>
