@@ -5,6 +5,7 @@ import { getData } from '../actions';
 
 import "./App.css";
 import AddForm from "./AddForm";
+import Smurf from "./Smurf";
 
 class App extends Component {
 
@@ -27,18 +28,24 @@ class App extends Component {
 
   render() {
     console.log(this.props.smurfs)
-    console.log('state work?: ', this.state)
     return (
-      <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
-        <button onClick={this.props.getData}>
-            Let's get some smurfs!
-        </button>
-        <AddForm handleChange={this.handleChange}/>
-        <div>
-          {this.props.smurfs.map(a=>a.name)}
+      <>
+        <h1 className="header">SMURFS in the village</h1>
+        <div className="App">
+          <div className="left-container">
+            <h3>Who is living in thie town?</h3>
+            <button onClick={this.props.getData}>
+              Let's get some smurfs!
+            </button>
+            <div>
+              {this.props.smurfs.map(a=><Smurf name={a.name} key={a.id} height={a.height} age={a.age}/>)}
+          </div>
+          </div>
+          <div className="right-container">
+            <AddForm handleChange={this.handleChange}/>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
